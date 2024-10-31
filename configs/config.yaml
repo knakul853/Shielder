@@ -1,0 +1,36 @@
+server:
+  listenAddr: ":8080"
+  readTimeout: 5s
+  writeTimeout: 5s
+  maxHeaderBytes: 1048576 # 1MB
+
+redis:
+  addr: "localhost:6379"
+  password: ""
+  db: 0
+  useSentinel: false
+  masterName: ""
+  sentinelAddrs: []
+
+rateLimit:
+  requestsPerMinute: 100
+  burstSize: 150
+  blockDuration: 1h
+
+metrics:
+  enabled: true
+  path: "/metrics"
+
+proxy:
+  targetURL: "http://localhost:3000"
+  trustedProxies:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+  allowedDomains:
+    - "example.com"
+    - "api.example.com"
+  blockedCountries:
+    - "XX"
+    - "YY"
+  enableGeoBlocking: false
