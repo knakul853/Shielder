@@ -48,7 +48,7 @@ Contributions are welcome! Please open issues or submit pull requests. Ensure yo
 
 ## VII. License
 
-[Specify License, e.g., MIT License]
+None
 
 ## VIII. Detailed Information
 
